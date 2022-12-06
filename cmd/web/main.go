@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/alexedwards/scs/v2"
-	"github.com/graample/goWebAppTraining/pkg/config"
-	"github.com/graample/goWebAppTraining/pkg/handlers"
-	"github.com/graample/goWebAppTraining/pkg/render"
+	"github.com/graample/goWebAppTraining/internal/config"
+	"github.com/graample/goWebAppTraining/internal/handlers"
+	"github.com/graample/goWebAppTraining/internal/render"
 )
 
 const portNumber = ":8080"
