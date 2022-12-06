@@ -72,8 +72,8 @@
         </form>
         `;
         attention.custom({
-            msg: html,
             title: 'Choose your dates',
+            msg: html,
             willOpen: () => {
                 const elem = document.getElementById("reservation-dates-modal");
                 const rp = new DateRangePicker(elem, {
@@ -94,7 +94,7 @@
 
                 fetch('/search-availability-json', {
                     method: "post",
-                    body: formData
+                    body: formData,
                 })
                     .then(response => response.json())
                     .then(data => {
