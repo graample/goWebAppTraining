@@ -13,7 +13,7 @@ func (m *testDBRepo) AllUsers() bool {
 // InsertReservation inserts a reservation into the database
 func (m *testDBRepo) InsertReservation(res models.Reservation) (int, error) {
 	// if the room id is 2, then fail; otherwise, pass
-	if res.roomID == 2 {
+	if res.RoomID == 2 {
 		return 0, errors.New("some error")
 	}
 	return 1, nil
@@ -45,4 +45,18 @@ func (m *testDBRepo) GetRoomByID(id int) (models.Room, error) {
 		return room, errors.New("some error")
 	}
 	return room, nil
+}
+
+func (m *testDBRepo) GetUserByID(id int) (models.User, error) {
+	var u models.User
+
+	return u, nil
+}
+
+func (m *testDBRepo) UpdateUser(u models.User) error {
+	return nil
+}
+
+func (m *testDBRepo) Authenticate(email, testPassword string) (int, string, error) {
+	return 1, "", nil
 }
